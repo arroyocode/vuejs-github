@@ -1,0 +1,23 @@
+body {
+    font-family: Tahoma, Arial, sans-serif;
+    font-size: 0.8em;
+    color: #00aa00;
+    margin: 2em;
+}
+
+input[type=text] {
+    color: #00aa00;
+    padding: 0.4em;
+}
+
+button {
+    background-color: #00aa00;
+    color: #000;
+    border: 0;
+    padding: 0.5em;
+}
+
+span {
+    display: block;
+    margin-top: 1em;
+}
