@@ -3,31 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Exploring GitHub with Vue.js</title>
-    <style>
-        body {
-            font-family: Tahoma, Arial, sans-serif;
-            font-size: 0.8em;
-            color: #00aa00;
-            margin: 2em;
-        }
-
-        input[type=text] {
-            color: #00aa00;
-            padding: 0.4em;
-        }
-
-        button {
-            background-color: #00aa00;
-            color: #000;
-            border: 0;
-            padding: 0.5em;
-        }
-
-        span {
-            display: block;
-            margin-top: 1em;
-        }
-    </style>
+    <link rel="stylesheet" href="core.css">
 </head>
 <body>
 <div id="app">
@@ -36,25 +12,6 @@
     <span>{{user}}</span>
 </div>
 </body>
-<script src="https://unpkg.com/vue@2.1.4/dist/vue.js"></script>
-<script type="text/javascript">
-    var vm = new Vue({
-        el: '#app',
-        data: {
-            username: null,
-            user: null
-        },
-        methods: {
-            fetchUser: function () {
-                var self = this;
-                var xhr = new XMLHttpRequest();
-                xhr.open('GET', 'https://api.github.com/users/' + self.username);
-                xhr.onload = function () {
-                    self.user = JSON.parse(xhr.responseText);
-                };
-                xhr.send();
-            }
-        }
-    });
-</script>
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script src="core.js"></script>
 </html>
